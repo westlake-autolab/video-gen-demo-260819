@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020817" />
+    <meta name="description" content="面向投资人展示 Awomo 视频生成大模型的多场景、强物理与行业落地能力。" />
+    <meta property="og:title" content="Awomo 视频生成大模型效果展示" />
+    <meta property="og:description" content="多场景 · 高质量 · 强物理 · 可落地" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://westlake-autolab.github.io/awomo-video-demo-260819/" />
+    <meta property="og:image" content="https://westlake-autolab.github.io/awomo-video-demo-260819/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Awomo 视频生成大模型效果展示</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="dashboard-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <div class="brand-name">视频生成大模型</div>
+            <div class="brand-slogan">以生成之力，创无限可能</div>
+          </div>
+        </div>
+
+        <div class="headline-block">
+          <div class="headline-kicker"><i></i> AWOMO · GENERATIVE INTELLIGENCE <i></i></div>
+          <h1>视频生成大模型效果展示</h1>
+          <p>多场景 <b>·</b> 高质量 <b>·</b> 强物理 <b>·</b> 可落地</p>
+        </div>
+
+        <div class="model-meta">
+          <div class="status-line"><span></span> SYSTEM ONLINE</div>
+          <time datetime="2026-08-19">2026-08-19</time>
+          <div>模型版本 <strong>Awomo-v0.1</strong></div>
+        </div>
+      </header>
+
+      <section class="demo-grid" id="demo-grid" aria-label="四类视频生成能力"></section>
+
+      <footer class="capability-bar">
+        <div class="cap-label"><span>CORE</span><strong>核心能力矩阵</strong></div>
+        <div class="capability"><div class="cap-icon">HD</div><div><strong>高质量输出</strong><span>支持 4K 超清画质</span></div></div>
+        <div class="capability"><div class="cap-icon">◇</div><div><strong>多场景覆盖</strong><span>通用场景 + 行业场景</span></div></div>
+        <div class="capability"><div class="cap-icon">ϟ</div><div><strong>强大生成能力</strong><span>复杂语义 + 精准生成</span></div></div>
+        <div class="capability"><div class="cap-icon">✓</div><div><strong>安全可靠可控</strong><span>内容合规、结果可控</span></div></div>
+        <div class="capability"><div class="cap-icon">↗</div><div><strong>持续迭代优化</strong><span>持续提升模型效果</span></div></div>
+      </footer>
+    </main>
+
+    <div class="modal-backdrop" id="video-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="GIF 大图预览">
+      <div class="video-modal">
+        <div class="modal-header"><span id="modal-title"></span><button id="modal-close" type="button" aria-label="关闭大图预览">×</button></div>
+        <img src="assets/demo-video.gif" alt="自动播放 GIF 大图" />
+        <div class="modal-foot"><span>AWOMO VIDEO MODEL</span><span>PHYSICS-AWARE GENERATION</span></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
