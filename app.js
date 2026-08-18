@@ -25,7 +25,7 @@ const sections = [
     videos: [
       ["小球轨道", "重力反馈 · 轨迹真实", "assets/physical-blueball.gif"],
       ["碾压模拟", "接触形变 · 受力可信", "assets/physical-crush.gif"],
-      ["存钱罐碰撞", "刚体碰撞 · 碎裂自然", "assets/physical-piggybank.gif"],
+      ["液体中的多米诺", "流体交互 · 运动可信", "assets/physical-domino-juice.gif"],
     ],
     highlights: [
       ["遵循物理规律", "碰撞、重力、流体"],
@@ -41,7 +41,7 @@ const sections = [
     videos: [
       ["机器人操作 01", "场景理解 · 动作连贯", "assets/robot-episode73.gif"],
       ["机器人操作 02", "任务执行 · 状态稳定", "assets/robot-episode15.gif"],
-      ["机器人操作 03", "多步规划 · 精准操作", "assets/robot-episode16.gif"],
+      ["机器人操作 03", "多步规划 · 精准操作", "assets/robot-episode28.gif"],
     ],
     highlights: [
       ["机器人动作可控", "运动规划、协同操作"],
