@@ -23,9 +23,9 @@ const sections = [
     subtitle: "基于物理规律模拟，生成更真实可信的动态视频",
     theme: "green",
     videos: [
-      ["小球轨道", "重力反馈 · 轨迹真实"],
-      ["复杂碰撞", "连续运动 · 状态稳定"],
-      ["液体流动", "流体自然 · 细节丰富"],
+      ["小球轨道", "重力反馈 · 轨迹真实", "assets/physical-blueball.gif"],
+      ["碾压模拟", "接触形变 · 受力可信", "assets/physical-crush.gif"],
+      ["存钱罐碰撞", "刚体碰撞 · 碎裂自然", "assets/physical-piggybank.gif"],
     ],
     highlights: [
       ["遵循物理规律", "碰撞、重力、流体"],
@@ -39,9 +39,9 @@ const sections = [
     subtitle: "面向机器人运动与操作，生成高一致性训练视频",
     theme: "purple",
     videos: [
-      ["机器人行走", "步态稳定 · 自然流畅"],
-      ["机械臂操作", "抓取精准 · 动作连贯"],
-      ["机器人导航", "路径规划 · 自主避障"],
+      ["机器人操作 01", "场景理解 · 动作连贯", "assets/robot-episode73.gif"],
+      ["机器人操作 02", "任务执行 · 状态稳定", "assets/robot-episode15.gif"],
+      ["机器人操作 03", "多步规划 · 精准操作", "assets/robot-episode16.gif"],
     ],
     highlights: [
       ["机器人动作可控", "运动规划、协同操作"],
@@ -55,9 +55,9 @@ const sections = [
     subtitle: "理解真实业务场景，预演风险并辅助科学决策",
     theme: "orange",
     videos: [
-      ["高空作业风险", "识别高处坠落隐患"],
-      ["吊装作业风险", "预判碰撞与倾覆风险"],
-      ["基坑塌陷风险", "识别基坑坍塌隐患"],
+      ["吊篮防摆风险", "缺少有效防摆约束，存在摆动、碰撞及人员坠落/挤压风险", "assets/downstream-gondola.gif"],
+      ["脚手架基础风险", "立杆基础积水泥泞，存在地基软化、底座下沉及架体失稳风险", "assets/downstream-scaffold.gif"],
+      ["钢丝绳脱槽风险", "滑轮未见钢丝绳防脱装置，存在跳槽脱槽风险", "assets/downstream-pulley.gif"],
     ],
     highlights: [
       ["面向真实场景", "下游业务赋能"],
@@ -71,12 +71,17 @@ const activeIndexes = [0, 0, 0, 0];
 const grid = document.querySelector("#demo-grid");
 const modal = document.querySelector("#video-modal");
 const modalTitle = document.querySelector("#modal-title");
+const modalImage = modal.querySelector("img");
+
+function getVideoSource(video) {
+  return video[2] || GIF_SRC;
+}
 
 function sectionMarkup(section, sectionIndex) {
   const thumbnails = section.videos.map((video, videoIndex) => `
     <button class="gif-thumb${videoIndex === 0 ? " active" : ""}" type="button" data-section="${sectionIndex}" data-video="${videoIndex}" aria-label="展示 ${video[0]}" aria-pressed="${videoIndex === 0}">
       <span class="thumb-index">0${videoIndex + 1}</span>
-      <img src="${GIF_SRC}" alt="" />
+      <img src="${getVideoSource(video)}" alt="" />
       <strong>${video[0]}</strong>
     </button>`).join("");
 
@@ -102,7 +107,7 @@ function sectionMarkup(section, sectionIndex) {
           <div class="gif-showcase">
             <div class="gif-thumbnails" aria-label="${section.title} 视频列表">${thumbnails}</div>
             <button class="featured-gif" type="button" data-featured-section="${sectionIndex}" aria-label="放大查看 ${section.videos[0][0]}">
-              <img src="${GIF_SRC}" alt="${section.videos[0][0]} 自动播放演示" />
+              <img src="${getVideoSource(section.videos[0])}" alt="${section.videos[0][0]} 自动播放演示" />
               <div class="video-vignette"></div>
               <span class="live-badge"><i></i> AUTO PLAY</span>
               ${section.theme === "orange" ? '<span class="risk-scan">RISK SCAN</span>' : ""}
@@ -131,7 +136,9 @@ function selectVideo(sectionIndex, videoIndex) {
 
   const featured = panel.querySelector(".featured-gif");
   featured.setAttribute("aria-label", `放大查看 ${video[0]}`);
-  featured.querySelector("img").alt = `${video[0]} 自动播放演示`;
+  const featuredImage = featured.querySelector("img");
+  featuredImage.src = getVideoSource(video);
+  featuredImage.alt = `${video[0]} 自动播放演示`;
   featured.querySelector(".featured-caption strong").textContent = video[0];
   featured.querySelector(".featured-caption p").textContent = video[1];
 }
@@ -143,7 +150,10 @@ grid.addEventListener("click", (event) => {
   const featured = event.target.closest("[data-featured-section]");
   if (featured) {
     const sectionIndex = Number(featured.dataset.featuredSection);
-    modalTitle.textContent = `${sections[sectionIndex].index} · ${sections[sectionIndex].videos[activeIndexes[sectionIndex]][0]}`;
+    const activeVideo = sections[sectionIndex].videos[activeIndexes[sectionIndex]];
+    modalTitle.textContent = `${sections[sectionIndex].index} · ${activeVideo[0]}`;
+    modalImage.src = getVideoSource(activeVideo);
+    modalImage.alt = `${activeVideo[0]} 自动播放大图`;
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.querySelector("#modal-close").focus();

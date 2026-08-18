@@ -63,6 +63,7 @@ button { font:inherit; }
 .featured-caption span { display:block; margin-bottom:2px; color:var(--theme); font:7px/1.2 ui-monospace,monospace; letter-spacing:1px; }
 .featured-caption strong { font-size:12px; }
 .featured-caption p { display:inline; margin:0 0 0 7px; color:#91a9bc; font-size:8.5px; }
+.theme-orange .featured-caption p { display:block; max-width:96%; margin:3px 0 0; line-height:1.35; }
 .risk-scan { position:absolute; left:6px; top:6px; padding:2px 5px; border:1px solid rgba(255,159,28,.55); color:#ffc16c; background:rgba(30,13,0,.68); font:8px/1.3 ui-monospace,monospace; letter-spacing:.5px; }
 .gallery-dots { height:12px; display:flex; justify-content:center; align-items:flex-end; gap:5px; }
 .gallery-dots button { width:4px; height:4px; padding:0; border:0; border-radius:50%; background:#3d5267; cursor:pointer; transition:.2s ease; }
