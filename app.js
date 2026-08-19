@@ -1,4 +1,4 @@
-const GIF_SRC = "assets/demo-video.gif";
+const GIF_SRC = "assets/general-waterfall.gif";
 
 const sections = [
   {
@@ -7,9 +7,9 @@ const sections = [
     subtitle: "多风格、多场景，高质量生成多样化视频内容",
     theme: "blue",
     videos: [
-      ["自然风光", "湖光山色 · 云雾缭绕"],
-      ["城市夜景", "霓虹灯下 · 车流如织"],
-      ["萌宠日常", "可爱瞬间 · 生活日常"],
+      ["峡谷瀑布", "飞瀑穿谷 · 植被丰茂", "assets/general-waterfall.gif"],
+      ["海湾城市", "滨海天际线 · 航拍运镜", "assets/general-bay-city.gif"],
+      ["峡湾风光", "湖湾群山 · 镜头开阔", "assets/general-fjord.gif"],
     ],
     highlights: [
       ["多样风格生成", "写实、国风、童萌"],
