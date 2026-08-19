@@ -22,7 +22,6 @@ button { font:inherit; }
 .headline-block p { margin:0; color:#a8c2d8; font-size:12px; letter-spacing:5px; }
 .headline-block p b { color:#18b7ff; }
 .model-meta { justify-self:end; text-align:right; font:11px/1.55 ui-monospace,monospace; color:#87a2b9; letter-spacing:.6px; }
-.model-meta time { display:block; margin:2px 0; color:#e9f6ff; font-size:16px; letter-spacing:2px; }
 .model-meta strong { color:#33bfff; font-weight:500; }
 .status-line { color:#54dfc8; font-size:9px; letter-spacing:1.2px; }
 .status-line span { display:inline-block; width:6px; height:6px; margin-right:5px; border-radius:50%; background:#2dd4bf; box-shadow:0 0 8px #2dd4bf; }
