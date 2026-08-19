@@ -1,11 +1,9 @@
-# Awomo Video Demo
+# Video Generation Demo
 
-Investor-facing static showcase for the Awomo video generation model.
+Investor-facing static showcase for the video generation model.
 
 ## GitHub Pages
 
 In the repository, open **Settings → Pages**, select **Deploy from a branch**, then choose `main` and `/(root)`.
 
-The project page will be available at:
-
-`https://westlake-autolab.github.io/awomo-video-demo-260819/`
+The public project URL will be shown in **Settings → Pages** after deployment.
