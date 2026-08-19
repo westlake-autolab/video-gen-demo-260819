@@ -49,7 +49,7 @@ button { font:inherit; }
 .gif-thumbnails { min-height:0; display:grid; grid-template-rows:repeat(3,minmax(0,1fr)); gap:5px; }
 .gif-thumb { position:relative; min-height:0; padding:0; overflow:hidden; border:1px solid rgba(130,166,194,.24); border-radius:5px; color:#dcecff; background:#020712; cursor:pointer; transition:.25s ease; opacity:.58; }
 .gif-thumb::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 30%,rgba(1,6,17,.9)); }
-.gif-thumb img { width:100%; height:100%; object-fit:cover; transform:scale(1.02); }
+.gif-thumb img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; background:transparent; transform:scale(1.02); }
 .gif-thumb strong { position:absolute; z-index:2; left:6px; right:5px; bottom:5px; overflow:hidden; text-align:left; text-overflow:ellipsis; white-space:nowrap; font-size:9px; font-weight:600; }
 .thumb-index { position:absolute; z-index:2; top:4px; left:4px; padding:2px 4px; border-radius:2px; color:#b8d2e4; background:rgba(0,6,16,.7); font:8px/1 ui-monospace,monospace; }
 .gif-thumb:hover,.gif-thumb.active { opacity:1; border-color:rgba(var(--rgb),.8); box-shadow:inset 3px 0 0 var(--theme),0 0 12px rgba(var(--rgb),.15); }
