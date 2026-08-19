@@ -39,9 +39,9 @@ const sections = [
     subtitle: "面向机器人运动与操作，生成高一致性训练视频",
     theme: "purple",
     videos: [
-      ["机器人操作 01", "场景理解 · 动作连贯", "assets/robot-episode73.gif"],
-      ["机器人操作 02", "任务执行 · 状态稳定", "assets/robot-episode15.gif"],
-      ["机器人操作 03", "多步规划 · 精准操作", "assets/robot-episode28.gif"],
+      ["拿起饮料放入托盘", "多目标识别 · 连续摆放", "assets/robot-episode73.gif"],
+      ["拿起鼠标放入盒中", "精准抓取 · 定点收纳", "assets/robot-episode15.gif"],
+      ["拿起小碗放入餐盘", "小物体抓取 · 稳定放置", "assets/robot-episode28.gif"],
     ],
     highlights: [
       ["机器人动作可控", "运动规划、协同操作"],
@@ -111,7 +111,7 @@ function sectionMarkup(section, sectionIndex) {
               <div class="video-vignette"></div>
               <span class="live-badge"><i></i> AUTO PLAY</span>
               ${section.theme === "orange" ? '<span class="risk-scan">RISK SCAN</span>' : ""}
-              <div class="featured-caption"><span>NOW SHOWING</span><strong>${section.videos[0][0]}</strong><p>${section.videos[0][1]}</p></div>
+              <div class="featured-caption"><strong>${section.videos[0][0]}</strong><p>${section.videos[0][1]}</p></div>
             </button>
           </div>
           <div class="gallery-dots" aria-label="自动轮播位置">${dots}</div>
