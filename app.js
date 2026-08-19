@@ -107,12 +107,10 @@ function sectionMarkup(section, sectionIndex) {
           <div class="gif-showcase">
             <div class="gif-thumbnails" aria-label="${section.title} 视频列表">${thumbnails}</div>
             <button class="featured-gif" type="button" data-featured-section="${sectionIndex}" aria-label="放大查看 ${section.videos[0][0]}">
-              <div class="featured-media">
-                <img src="${getVideoSource(section.videos[0])}" alt="${section.videos[0][0]} 自动播放演示" />
-                <div class="video-vignette"></div>
-                <span class="live-badge"><i></i> AUTO PLAY</span>
-                ${section.theme === "orange" ? '<span class="risk-scan">RISK SCAN</span>' : ""}
-              </div>
+              <img src="${getVideoSource(section.videos[0])}" alt="${section.videos[0][0]} 自动播放演示" />
+              <div class="video-vignette"></div>
+              <span class="live-badge"><i></i> AUTO PLAY</span>
+              ${section.theme === "orange" ? '<span class="risk-scan">RISK SCAN</span>' : ""}
               <div class="featured-caption"><strong>${section.videos[0][0]}</strong><p>${section.videos[0][1]}</p></div>
             </button>
           </div>
